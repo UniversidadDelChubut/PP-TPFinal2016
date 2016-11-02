@@ -5,6 +5,7 @@ public abstract class Guerrero {
 		private int nivelVida;
 		private int defensa;
 		private int nivelAtaque;
+
 		private Armas armaPrimaria;
 		private Armas armaSecundaria;
 		private String nombre;
