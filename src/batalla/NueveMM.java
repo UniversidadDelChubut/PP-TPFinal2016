@@ -3,6 +3,6 @@ package batalla;
 public class NueveMM extends ArmasFuego {
 
 	public NueveMM() {
-		super(60, 8, 8);
+		super(60, 8);
 	}
 }

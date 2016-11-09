@@ -5,10 +5,10 @@ public abstract class ArmasAgotables extends Armas {
 	private int cantMax;
 	private int cantMuniciones;
 	
-	public ArmasAgotables(int daño, int cantMax, int cantMuniciones) {
+	public ArmasAgotables(int daño, int cantMax) {
 		super(daño);
 		this.cantMax= cantMax;
-		this.cantMuniciones = cantMuniciones;
+		this.cantMuniciones = cantMax;
 	}
 	
 	public void Usar(){
