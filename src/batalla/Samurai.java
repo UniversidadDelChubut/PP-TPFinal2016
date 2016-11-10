@@ -4,11 +4,8 @@ import java.util.Random;
 
 public abstract class Samurai extends Guerrero {
 	
-	public Samurai(int nivelVida, int defensa, String nombre) {
-		super(150, 100, "Kenshi");
-	}
-	
-	public Samurai() {
+	public Samurai(String nombre) {
+		super(150, 100, 50, "Kenshi");
 		Armas a1 = null;
 		Armas a2 = null;
 			
@@ -32,7 +29,7 @@ public abstract class Samurai extends Guerrero {
 		this.setArmaPrimaria(a1);
 		
 		do {
-				
+			aux = r.nextInt(4);
 			if (aux == 0) {
 				a2 = new Yumi();
 			}
@@ -47,15 +44,13 @@ public abstract class Samurai extends Guerrero {
 			}
 			
 		} while (a2.getClass().equals(a1.getClass()));
-			
-			
-
+		
+		
 		this.setArmaSecundaria(a2);
 	}
 	 
 	 public Armas seleccionarArma(Guerrero Oponente) {
-		
-		return null;
+			return null;
 	}
 
 }

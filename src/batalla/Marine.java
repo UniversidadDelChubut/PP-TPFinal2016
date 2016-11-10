@@ -4,11 +4,9 @@ import java.util.Random;
 
 public abstract class Marine extends Guerrero {
 	
-	public Marine(int nivelVida, int defensa, String nombre) {
-		super(200, 100, "PEPE");
-	}
+	public Marine(String nombre) {
+		super(200, 100, 80, "PEPE");
 	
-	public Marine() {
 		Armas a1 = null;
 		Armas a2 = null;
 			
@@ -32,7 +30,7 @@ public abstract class Marine extends Guerrero {
 		this.setArmaPrimaria(a1);
 		
 		do {
-				
+			aux = r.nextInt(4);	
 			if (aux == 0) {
 				a2 = new Rifle();
 			}

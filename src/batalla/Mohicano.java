@@ -4,11 +4,8 @@ import java.util.Random;
 
 public abstract class Mohicano extends Guerrero{
 
-	public Mohicano (int nivelVida, int defensa, String nombre) {
-		super(100, 20, "Neymar");
-	}
-	
-	public Mohicano() {
+	public Mohicano (String nombre) {
+		super(100, 20, 10, "Neymar");
 		Armas a1 = null;
 		Armas a2 = null;
 			
@@ -29,7 +26,7 @@ public abstract class Mohicano extends Guerrero{
 		this.setArmaPrimaria(a1);
 		
 		do {
-				
+			aux = r.nextInt(3);
 			if (aux == 0) {
 				a2 = new FacaTumbera();
 			}
@@ -48,6 +45,6 @@ public abstract class Mohicano extends Guerrero{
 	
 	
 	public Armas seleccionarArma(Guerrero Oponente) {
-		return null;
+		return getArmaPrimaria();
 	}
 }

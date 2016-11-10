@@ -7,7 +7,12 @@ public abstract class Armas {
 		this.daño = daño;
 	}
 	
-	public void Usar(){}
+	public void Usar(){
+		
+		
+		
+		
+	}
 	
 	
 	public int getDaño() {

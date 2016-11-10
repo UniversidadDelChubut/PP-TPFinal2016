@@ -6,7 +6,7 @@ public class Principal {
 		//ArmasAgotables a = new NueveMM();
 		
 		Zulu z = new Zulu("Neymar");
-		Ninja n = new Ninja();
+		Ninja n = new Ninja("Naruto");
 		
 		//while (/* Esten vivos*/) {
 			

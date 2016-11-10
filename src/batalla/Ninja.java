@@ -4,11 +4,9 @@ import java.util.Random;
 
 public class Ninja extends Guerrero {
 	
-	public Ninja (int nivelVida, int defensa, String nombre) {
-		super(100, 50, "Naruto");
-	}
-	
-	 public Ninja() {
+	public Ninja (String nombre) {
+		super(100, 50, 60, "Naruto");
+
 		 	Armas a1 = null;
 			Armas a2 = null;
 			
@@ -31,9 +29,10 @@ public class Ninja extends Guerrero {
 			if (aux == 4) {
 				a1 = new Bou();
 			}
+			this.setArmaPrimaria(a1);
 			
 			do {
-				
+				aux = r.nextInt(5);
 				if (aux == 0) {
 					a2 = new Shuriken();
 				}
@@ -53,12 +52,10 @@ public class Ninja extends Guerrero {
 			} while (a2.getClass().equals(a1.getClass()));
 				
 			
-			this.setArmaPrimaria(a1);
 			this.setArmaSecundaria(a2);
 	}
 	 
 	 public Armas seleccionarArma(Guerrero Oponente) {
-		
-		return null;
+		return getArmaPrimaria();
 	}
 }
