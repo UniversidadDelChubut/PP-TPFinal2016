@@ -2,7 +2,7 @@ package batalla;
 
 import java.util.Random;
 
-public abstract class Marine extends Guerrero {
+public class Marine extends Guerrero {
 	
 	public Marine(String nombre) {
 		super(200, 100, 80, "PEPE");

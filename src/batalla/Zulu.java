@@ -5,7 +5,7 @@ import java.util.Random;
 public class Zulu extends Guerrero {
 	
 	public Zulu(String nombre) {
-		super(100, 20, 30,"Mr POPO");
+		super(100, 50, 60,"Mr POPO");
 
 		Armas a1 = null;
 		Armas a2 = null;
@@ -26,7 +26,6 @@ public class Zulu extends Guerrero {
 		this.setArmaPrimaria(a1);
 		
 		do {
-				
 			aux = r.nextInt(3);
 			if (aux == 0) {
 				a2 = new Iklwa();
@@ -44,9 +43,10 @@ public class Zulu extends Guerrero {
 	}
 	 
 	 public Armas seleccionarArma(Guerrero Oponente) {
-		if(getArmaPrimaria() != null){
+		 
+		if(getArmaPrimaria() != null) {
 			return getArmaPrimaria();
-		}else {
+		} else {
 			return getArmaSecundaria();
 	 	}
 	}

@@ -2,7 +2,7 @@ package batalla;
 
 import java.util.Random;
 
-public abstract class Mohicano extends Guerrero{
+public class Mohicano extends Guerrero{
 
 	public Mohicano (String nombre) {
 		super(100, 20, 10, "Neymar");
