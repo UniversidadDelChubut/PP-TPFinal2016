@@ -16,17 +16,20 @@ public abstract class Guerrero {
 			this.nombre = nombre;
 		}
 		public void atacar(Guerrero Oponente){
+			Armas armaAtaque = this.seleccionarArma(Oponente);
+			armaAtaque.Usar();
+			
 			if(this.nivelVida == 0)
 				return;
 			if(this.equals(Oponente))
 				return;
 			if(Oponente.nivelVida == 0)
 				return;
-			
-			Armas armaAtaque = this.seleccionarArma(Oponente);
-			armaAtaque.Usar();
+
 			if (Oponente.nivelVida > 0){
-				Oponente.setNivelVida(-((armaAtaque.getDaño() + this.nivelAtaque) - Oponente.defensa));
+				int nivelVidaADescontar = Math.abs(((armaAtaque.getDaño() + this.nivelAtaque) - Oponente.defensa)); 
+				
+				Oponente.setNivelVida(Oponente.getNivelVida() - nivelVidaADescontar);
 				//Oponente.nivelVida = (armaAtaque.getDaño() + this.nivelAtaque) - Oponente.defensa;
 				
 			}
@@ -65,5 +68,8 @@ public abstract class Guerrero {
 			} else {
 				return this.nivelVida = nivelVida;
 			}
+		}
+		public String toString(){
+			return this.getClass().getSimpleName();
 		}
 }

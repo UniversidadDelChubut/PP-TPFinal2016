@@ -3,7 +3,7 @@ package batalla;
 public class Escopeta extends ArmasFuego {
 
 	public Escopeta() {
-		super(70, 6);
+		super(50, 6);
 	}
 
 }

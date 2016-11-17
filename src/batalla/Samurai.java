@@ -5,7 +5,7 @@ import java.util.Random;
 public class Samurai extends Guerrero {
 	
 	public Samurai(String nombre) {
-		super(150, 100, 50, "Kenshi");
+		super(100, 80, 5, "Kenshi");
 		Armas a1 = null;
 		Armas a2 = null;
 			
@@ -50,7 +50,10 @@ public class Samurai extends Guerrero {
 	}
 	 
 	 public Armas seleccionarArma(Guerrero Oponente) {
-			return null;
+		if(getArmaPrimaria() != null) {
+			return getArmaPrimaria();
+		} else {
+			return getArmaSecundaria();
+		 }
 	}
-
 }

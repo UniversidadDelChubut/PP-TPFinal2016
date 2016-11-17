@@ -5,7 +5,7 @@ import java.util.Random;
 public class Ninja extends Guerrero {
 	
 	public Ninja (String nombre) {
-		super(100, 50, 60, "Naruto");
+		super(100, 50, 3, "Naruto");
 
 		 	Armas a1 = null;
 			Armas a2 = null;

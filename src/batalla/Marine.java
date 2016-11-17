@@ -5,8 +5,7 @@ import java.util.Random;
 public class Marine extends Guerrero {
 	
 	public Marine(String nombre) {
-		super(200, 100, 80, "PEPE");
-	
+		super(200, 100, 10, "Maestruli");
 		Armas a1 = null;
 		Armas a2 = null;
 			
@@ -52,9 +51,12 @@ public class Marine extends Guerrero {
 	}
 	
 	 public Armas seleccionarArma(Guerrero Oponente) {
-		return null;
-	}
-	 
+		if(getArmaPrimaria() != null) {
+			return getArmaPrimaria();
+		} else {
+			return getArmaSecundaria();
+	 	}
+	 }
 }
 
 

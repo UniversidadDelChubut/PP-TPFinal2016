@@ -5,7 +5,7 @@ import java.util.Random;
 public class Mohicano extends Guerrero{
 
 	public Mohicano (String nombre) {
-		super(100, 20, 10, "Neymar");
+		super(80, 20, 1, "Neymar");
 		Armas a1 = null;
 		Armas a2 = null;
 			
@@ -45,6 +45,10 @@ public class Mohicano extends Guerrero{
 	
 	
 	public Armas seleccionarArma(Guerrero Oponente) {
-		return getArmaPrimaria();
+		if(getArmaPrimaria() != null) {
+			return getArmaPrimaria();
+		} else {
+			return getArmaSecundaria();
+	 	}
 	}
 }

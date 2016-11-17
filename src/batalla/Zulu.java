@@ -5,7 +5,7 @@ import java.util.Random;
 public class Zulu extends Guerrero {
 	
 	public Zulu(String nombre) {
-		super(100, 50, 60,"Mr POPO");
+		super(100, 50, 1,"Mr popo");
 
 		Armas a1 = null;
 		Armas a2 = null;

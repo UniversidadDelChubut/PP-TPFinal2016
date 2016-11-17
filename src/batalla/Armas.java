@@ -6,12 +6,11 @@ public abstract class Armas {
 	public Armas (int daño){
 		this.daño = daño;
 	}
-	
+	public String toString(){
+		return this.getClass().getSimpleName();
+	}
 	public void Usar(){
-		
-		
-		
-		
+
 	}
 	
 	
